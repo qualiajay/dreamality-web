@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Dreamality",
-  description: "How Dreamality protects your data and respects your privacy.",
+  description:
+    "Dreamality privacy policy: how we collect, use, retain, and protect your personal data.",
 };
+
+const APPLE_PRIVACY = "https://www.apple.com/legal/privacy/";
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen">
-      {/* Header */}
       <header className="border-b border-white/[0.06]">
         <div className="max-w-3xl mx-auto px-6 h-16 flex items-center">
           <a
@@ -20,7 +22,6 @@ export default function PrivacyPolicy() {
         </div>
       </header>
 
-      {/* Content */}
       <main className="max-w-3xl mx-auto px-6 py-16 md:py-24">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold mb-4">
           Legal
@@ -28,109 +29,600 @@ export default function PrivacyPolicy() {
         <h1 className="font-heading text-3xl md:text-5xl font-light text-cream tracking-tight leading-tight mb-4">
           Privacy Policy
         </h1>
-        <p className="text-sm text-muted mb-16">
-          Last updated: April 2026
-        </p>
+        <p className="text-sm text-muted mb-16">Last updated: April 05, 2026</p>
 
         <div className="space-y-12">
-          <Section title="Overview">
+          <section className="text-sm text-silver leading-relaxed font-light space-y-4">
             <p>
-              Dreamality is a personal dream journal. Your dreams are deeply
-              private, and we build every part of this product with that
-              principle at the center. This policy explains what data we
-              collect, how we use it, and your rights.
+              This Privacy Policy describes Our policies and procedures on the
+              collection, use and disclosure of Your information when You use
+              the Service and tells You about Your privacy rights and how the
+              law protects You.
             </p>
+            <p>
+              We use Your Personal Data to provide and improve the Service. By
+              using the Service, You agree to the collection and use of
+              information in accordance with this Privacy Policy. This Privacy
+              Policy has been created with the help of the TermsFeed Privacy
+              Policy Generator.
+            </p>
+          </section>
+
+          <Section title="Interpretation and Definitions">
+            <Subsection title="Interpretation">
+              <p>
+                The words whose initial letters are capitalized have meanings
+                defined under the following conditions. The following
+                definitions shall have the same meaning regardless of whether
+                they appear in singular or in plural.
+              </p>
+            </Subsection>
+            <Subsection title="Definitions">
+              <p>For the purposes of this Privacy Policy:</p>
+              <Definition term="Account">
+                means a unique account created for You to access our Service or
+                parts of our Service.
+              </Definition>
+              <Definition term="Affiliate">
+                means an entity that controls, is controlled by, or is under
+                common control with a party, where &quot;control&quot; means
+                ownership of 50% or more of the shares, equity interest or other
+                securities entitled to vote for election of directors or other
+                managing authority.
+              </Definition>
+              <Definition term="Application">
+                refers to Dreamality, the software program provided by the
+                Company.
+              </Definition>
+              <Definition term='Company (referred to as either "the Company", "We", "Us" or "Our" in this Privacy Policy)'>
+                refers to Dreamality.
+              </Definition>
+              <Definition term="Country">refers to: Ontario, Canada</Definition>
+              <Definition term="Device">
+                means any device that can access the Service such as a computer,
+                a cell phone or a digital tablet.
+              </Definition>
+              <Definition term='Personal Data (or "Personal Information")'>
+                is any information that relates to an identified or identifiable
+                individual.
+              </Definition>
+              <p>
+                We use &quot;Personal Data&quot; and &quot;Personal
+                Information&quot; interchangeably unless a law uses a specific
+                term.
+              </p>
+              <Definition term="Service">refers to the Application.</Definition>
+              <Definition term="Service Provider">
+                means any natural or legal person who processes the data on
+                behalf of the Company. It refers to third-party companies or
+                individuals employed by the Company to facilitate the Service, to
+                provide the Service on behalf of the Company, to perform
+                services related to the Service or to assist the Company in
+                analyzing how the Service is used.
+              </Definition>
+              <Definition term="Usage Data">
+                refers to data collected automatically, either generated by the
+                use of the Service or from the Service infrastructure itself (for
+                example, the duration of a page visit).
+              </Definition>
+              <Definition term="You">
+                means the individual accessing or using the Service, or the
+                company, or other legal entity on behalf of which such
+                individual is accessing or using the Service, as applicable.
+              </Definition>
+            </Subsection>
           </Section>
 
-          <Section title="What We Collect">
-            <p>When you use Dreamality, we may collect the following:</p>
+          <Section title="Collecting and Using Your Personal Data">
+            <Subsection title="Types of Data Collected">
+              <Subsection title="Personal Data">
+                <p>
+                  While using Our Service, We may ask You to provide Us with
+                  certain personally identifiable information that can be used
+                  to contact or identify You. Personally identifiable information
+                  may include, but is not limited to:
+                </p>
+              </Subsection>
+              <Subsection title="Usage Data">
+                <p>
+                  Usage Data is collected automatically when using the Service.
+                </p>
+                <p>
+                  Usage Data may include information such as Your Device&apos;s
+                  Internet Protocol address (e.g. IP address), browser type,
+                  browser version, the pages of our Service that You visit, the
+                  time and date of Your visit, the time spent on those pages,
+                  unique device identifiers and other diagnostic data.
+                </p>
+                <p>
+                  When You access the Service by or through a mobile device, We
+                  may collect certain information automatically, including, but
+                  not limited to, the type of mobile device You use, Your mobile
+                  device&apos;s unique ID, the IP address of Your mobile device,
+                  Your mobile operating system, the type of mobile Internet
+                  browser You use, unique device identifiers and other diagnostic
+                  data.
+                </p>
+                <p>
+                  We may also collect information that Your browser sends
+                  whenever You visit Our Service or when You access the Service
+                  by or through a mobile device.
+                </p>
+              </Subsection>
+              <Subsection title="Payments">
+                <p>
+                  We provide paid products and/or services within the
+                  Application. In that case, we use third-party services for
+                  payment processing (e.g. payment processors).
+                </p>
+                <p>
+                  We will not store or collect Your payment card details. That
+                  information is provided directly to Our third-party payment
+                  processors whose use of Your personal information is governed
+                  by their Privacy Policy. These payment processors adhere to
+                  the standards set by PCI-DSS as managed by the PCI Security
+                  Standards Council.
+                </p>
+                <p>
+                  <strong className="text-cream font-medium">
+                    Apple Store In-App Payments:
+                  </strong>{" "}
+                  Their Privacy Policy can be viewed at{" "}
+                  <a
+                    href={APPLE_PRIVACY}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold hover:text-gold-light transition-colors duration-300 underline underline-offset-4 decoration-gold/30"
+                  >
+                    {APPLE_PRIVACY}
+                  </a>
+                  .
+                </p>
+              </Subsection>
+            </Subsection>
+
+            <Subsection title="Use of Your Personal Data">
+              <p>The Company may use Personal Data for the following purposes:</p>
+              <ul className="list-disc list-inside space-y-2 mt-3">
+                <li>
+                  To provide and maintain our Service, including to monitor the
+                  usage of our Service.
+                </li>
+                <li>
+                  To manage Your Account: to manage Your registration as a user
+                  of the Service. The Personal Data You provide can give You
+                  access to different functionalities of the Service that are
+                  available to You as a registered user.
+                </li>
+                <li>
+                  For the performance of a contract: the development, compliance
+                  and undertaking of the purchase contract for the products,
+                  items or services You have purchased or of any other contract
+                  with Us through the Service.
+                </li>
+                <li>
+                  To contact You: To contact You by email, telephone calls, SMS,
+                  or other equivalent forms of electronic communication, such
+                  as a mobile application&apos;s push notifications regarding
+                  updates or informative communications related to the
+                  functionalities, products or contracted services, including
+                  the security updates, when necessary or reasonable for their
+                  implementation.
+                </li>
+                <li>
+                  To provide You with news, special offers, and general
+                  information about other goods, services and events which We
+                  offer that are similar to those that you have already
+                  purchased or inquired about unless You have opted not to
+                  receive such information.
+                </li>
+                <li>
+                  To manage Your requests: To attend and manage Your requests to
+                  Us.
+                </li>
+                <li>
+                  For business transfers: We may use Your Personal Data to
+                  evaluate or conduct a merger, divestiture, restructuring,
+                  reorganization, dissolution, or other sale or transfer of
+                  some or all of Our assets, whether as a going concern or as
+                  part of bankruptcy, liquidation, or similar proceeding, in
+                  which Personal Data held by Us about our Service users is
+                  among the assets transferred.
+                </li>
+                <li>
+                  For other purposes: We may use Your information for other
+                  purposes, such as data analysis, identifying usage trends,
+                  determining the effectiveness of our promotional campaigns and
+                  to evaluate and improve our Service, products, services,
+                  marketing and your experience.
+                </li>
+              </ul>
+              <p className="mt-4">
+                We may share Your Personal Data in the following situations:
+              </p>
+              <ul className="list-disc list-inside space-y-2 mt-3">
+                <li>
+                  <strong className="text-cream font-medium">
+                    With Service Providers:
+                  </strong>{" "}
+                  We may share Your Personal Data with Service Providers to
+                  monitor and analyze the use of our Service, to contact You.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    For business transfers:
+                  </strong>{" "}
+                  We may share or transfer Your Personal Data in connection
+                  with, or during negotiations of, any merger, sale of Company
+                  assets, financing, or acquisition of all or a portion of Our
+                  business to another company.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    With Affiliates:
+                  </strong>{" "}
+                  We may share Your Personal Data with Our affiliates, in which
+                  case we will require those affiliates to honor this Privacy
+                  Policy. Affiliates include Our parent company and any other
+                  subsidiaries, joint venture partners or other companies that
+                  We control or that are under common control with Us.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    With business partners:
+                  </strong>{" "}
+                  We may share Your Personal Data with Our business partners to
+                  offer You certain products, services or promotions.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    With other users:
+                  </strong>{" "}
+                  If Our Service offers public areas, when You share Personal
+                  Data or otherwise interact in the public areas with other
+                  users, such information may be viewed by all users and may be
+                  publicly distributed outside.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    With Your consent:
+                  </strong>{" "}
+                  We may disclose Your Personal Data for any other purpose with
+                  Your consent.
+                </li>
+              </ul>
+            </Subsection>
+          </Section>
+
+          <Section title="Retention of Your Personal Data">
+            <p>
+              The Company will retain Your Personal Data only for as long as is
+              necessary for the purposes set out in this Privacy Policy. We will
+              retain and use Your Personal Data to the extent necessary to comply
+              with our legal obligations (for example, if We are required to
+              retain Your data to comply with applicable laws), resolve
+              disputes, and enforce our legal agreements and policies.
+            </p>
+            <p>
+              Where possible, We apply shorter retention periods and/or reduce
+              identifiability by deleting, aggregating, or anonymizing data.
+              Unless otherwise stated, the retention periods below are maximum
+              periods (&quot;up to&quot;) and We may delete or anonymize data
+              sooner when it is no longer needed for the relevant purpose. We
+              apply different retention periods to different categories of
+              Personal Data based on the purpose of processing and legal
+              obligations:
+            </p>
+            <Subsection title="Account Information">
+              <p>
+                <strong className="text-cream font-medium">User Accounts:</strong>{" "}
+                retained for the duration of your account relationship plus up
+                to 24 months after account closure to handle any post-termination
+                issues or resolve disputes.
+              </p>
+            </Subsection>
+            <Subsection title="Usage Data">
+              <p>
+                <strong className="text-cream font-medium">
+                  Application usage statistics:
+                </strong>{" "}
+                up to 24 months to understand feature adoption and service
+                improvements.
+              </p>
+              <p>
+                <strong className="text-cream font-medium">
+                  Server logs (IP addresses, access times):
+                </strong>{" "}
+                up to 24 months for security monitoring and troubleshooting
+                purposes.
+              </p>
+              <p>
+                Usage Data is retained in accordance with the retention periods
+                described above, and may be retained longer only where necessary
+                for security, fraud prevention, or legal compliance.
+              </p>
+            </Subsection>
+            <p>We may retain Personal Data beyond the periods stated above for different reasons:</p>
             <ul className="list-disc list-inside space-y-2 mt-3">
               <li>
-                <strong className="text-cream font-medium">Dream entries</strong> — text and voice
-                recordings you create within the app.
+                <strong className="text-cream font-medium">Legal obligation:</strong>{" "}
+                We are required by law to retain specific data (e.g., financial
+                records for tax authorities).
               </li>
               <li>
-                <strong className="text-cream font-medium">Account information</strong> — your email
-                address, used to create and manage your account.
+                <strong className="text-cream font-medium">Legal claims:</strong>{" "}
+                Data is necessary to establish, exercise, or defend legal
+                claims.
               </li>
               <li>
-                <strong className="text-cream font-medium">Usage data</strong> — anonymous analytics
-                to help us improve the app experience, such as feature usage
-                frequency and app stability metrics.
+                <strong className="text-cream font-medium">Your explicit request:</strong>{" "}
+                You ask Us to retain specific information.
+              </li>
+              <li>
+                <strong className="text-cream font-medium">Technical limitations:</strong>{" "}
+                Data exists in backup systems that are scheduled for routine
+                deletion.
+              </li>
+            </ul>
+            <p>
+              You may request information about how long We will retain Your
+              Personal Data by contacting Us.
+            </p>
+            <p>
+              When retention periods expire, We securely delete or anonymize
+              Personal Data according to the following procedures:
+            </p>
+            <ul className="list-disc list-inside space-y-2 mt-3">
+              <li>
+                <strong className="text-cream font-medium">Deletion:</strong>{" "}
+                Personal Data is removed from Our systems and no longer actively
+                processed.
+              </li>
+              <li>
+                <strong className="text-cream font-medium">Backup retention:</strong>{" "}
+                Residual copies may remain in encrypted backups for a limited
+                period consistent with our backup retention schedule and are not
+                restored except where necessary for security, disaster recovery,
+                or legal compliance.
+              </li>
+              <li>
+                <strong className="text-cream font-medium">Anonymization:</strong>{" "}
+                In some cases, We convert Personal Data into anonymous
+                statistical data that cannot be linked back to You. This
+                anonymized data may be retained indefinitely for research and
+                analytics.
               </li>
             </ul>
           </Section>
 
-          <Section title="How We Use Your Data">
+          <Section title="Transfer of Your Personal Data">
             <p>
-              Your dream content is used solely to provide you with
-              interpretations, conversations, and personal insights within the
-              app. We do not sell your data. We do not use your dreams to train
-              AI models. Your content is yours.
+              Your information, including Personal Data, is processed at the
+              Company&apos;s operating offices and in any other places where the
+              parties involved in the processing are located. It means that this
+              information may be transferred to — and maintained on — computers
+              located outside of Your state, province, country or other
+              governmental jurisdiction where the data protection laws may
+              differ from those from Your jurisdiction.
+            </p>
+            <p>
+              Where required by applicable law, We will ensure that international
+              transfers of Your Personal Data are subject to appropriate
+              safeguards and supplementary measures where appropriate. The
+              Company will take all steps reasonably necessary to ensure that
+              Your data is treated securely and in accordance with this Privacy
+              Policy and no transfer of Your Personal Data will take place to an
+              organization or a country unless there are adequate controls in
+              place including the security of Your data and other personal
+              information.
             </p>
           </Section>
 
-          <Section title="Data Storage & Security">
+          <Section title="Delete Your Personal Data">
             <p>
-              All dream entries are encrypted in transit and at rest. We use
-              industry-standard security practices to protect your data. Voice
-              recordings are processed for transcription and are not stored
-              beyond what is necessary to provide the service.
+              You have the right to delete or request that We assist in deleting
+              the Personal Data that We have collected about You.
+            </p>
+            <p>
+              Our Service may give You the ability to delete certain information
+              about You from within the Service.
+            </p>
+            <p>
+              You may update, amend, or delete Your information at any time by
+              signing in to Your Account, if you have one, and visiting the
+              account settings section that allows you to manage Your personal
+              information. You may also contact Us to request access to, correct,
+              or delete any Personal Data that You have provided to Us.
+            </p>
+            <p>
+              Please note, however, that We may need to retain certain information
+              when we have a legal obligation or lawful basis to do so.
             </p>
           </Section>
 
-          <Section title="Third-Party Services">
+          <Section title="Disclosure of Your Personal Data">
+            <Subsection title="Business Transactions">
+              <p>
+                If the Company is involved in a merger, acquisition or asset
+                sale, Your Personal Data may be transferred. We will provide
+                notice before Your Personal Data is transferred and becomes
+                subject to a different Privacy Policy.
+              </p>
+            </Subsection>
+            <Subsection title="Law enforcement">
+              <p>
+                Under certain circumstances, the Company may be required to
+                disclose Your Personal Data if required to do so by law or in
+                response to valid requests by public authorities (e.g. a court or
+                a government agency).
+              </p>
+            </Subsection>
+            <Subsection title="Other legal requirements">
+              <p>
+                The Company may disclose Your Personal Data in the good faith
+                belief that such action is necessary to:
+              </p>
+              <ul className="list-disc list-inside space-y-2 mt-3">
+                <li>Comply with a legal obligation</li>
+                <li>
+                  Protect and defend the rights or property of the Company
+                </li>
+                <li>
+                  Prevent or investigate possible wrongdoing in connection with
+                  the Service
+                </li>
+                <li>
+                  Protect the personal safety of Users of the Service or the
+                  public
+                </li>
+                <li>Protect against legal liability</li>
+              </ul>
+            </Subsection>
+          </Section>
+
+          <Section title="Security of Your Personal Data">
             <p>
-              We may use third-party services for AI processing (such as
-              generating interpretations) and infrastructure. These services
-              process data on our behalf under strict data processing
-              agreements and do not retain your personal content.
+              The security of Your Personal Data is important to Us, but
+              remember that no method of transmission over the Internet, or
+              method of electronic storage is 100% secure. While We strive to use
+              commercially reasonable means to protect Your Personal Data, We
+              cannot guarantee its absolute security.
             </p>
           </Section>
 
-          <Section title="Your Rights">
-            <p>You have the right to:</p>
-            <ul className="list-disc list-inside space-y-2 mt-3">
-              <li>Access all data associated with your account.</li>
-              <li>Request deletion of your account and all associated data.</li>
-              <li>Export your dream journal entries at any time.</li>
-              <li>Opt out of anonymous analytics collection.</li>
-            </ul>
+          <Section title="GDPR Privacy">
+            <Subsection title="Legal Basis for Processing Personal Data under GDPR">
+              <p>We may process Personal Data under the following conditions:</p>
+              <ul className="list-disc list-inside space-y-2 mt-3">
+                <li>
+                  <strong className="text-cream font-medium">Consent:</strong>{" "}
+                  You have given Your consent for processing Personal Data for
+                  one or more specific purposes.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    Performance of a contract:
+                  </strong>{" "}
+                  Provision of Personal Data is necessary for the performance of
+                  an agreement with You and/or for any pre-contractual obligations
+                  thereof.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    Legal obligations:
+                  </strong>{" "}
+                  Processing Personal Data is necessary for compliance with a
+                  legal obligation to which the Company is subject.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    Legitimate interests:
+                  </strong>{" "}
+                  Processing Personal Data is necessary for the purposes of the
+                  legitimate interests pursued by the Company.
+                </li>
+              </ul>
+            </Subsection>
+            <Subsection title="Your Rights under the GDPR">
+              <p>
+                The Company undertakes to respect the confidentiality of Your
+                Personal Data and to guarantee You can exercise Your rights. You
+                have the right under this Privacy Policy, and by law if You are
+                within the EU, to:
+              </p>
+              <ul className="list-disc list-inside space-y-2 mt-3">
+                <li>Request access to Your Personal Data.</li>
+                <li>
+                  Request correction of the Personal Data that We hold about
+                  You.
+                </li>
+                <li>Object to processing of Your Personal Data.</li>
+                <li>Request erasure of Your Personal Data.</li>
+                <li>Request the transfer of Your Personal Data.</li>
+                <li>Withdraw Your consent.</li>
+              </ul>
+            </Subsection>
+            <Subsection title="Exercising of Your GDPR Data Protection Rights">
+              <p>
+                You may exercise Your rights of access, rectification,
+                cancellation and opposition by contacting Us. Please note that
+                we may ask You to verify Your identity before responding to such
+                requests. If You make a request, We will try our best to respond
+                to You as soon as possible.
+              </p>
+              <p>
+                You have the right to complain to a Data Protection Authority
+                about Our collection and use of Your Personal Data. For more
+                information, if You are in the European Economic Area (EEA),
+                please contact Your local data protection authority in the EEA.
+              </p>
+            </Subsection>
           </Section>
 
-          <Section title="Children's Privacy">
+          <Section title="Children&apos;s Privacy">
             <p>
-              Dreamality is not intended for children under the age of 13. We
-              do not knowingly collect personal data from children.
+              Our Service does not address anyone under the age of 16. We do not
+              knowingly collect personally identifiable information from anyone
+              under the age of 16. If You are a parent or guardian and You are
+              aware that Your child has provided Us with Personal Data, please
+              contact Us. If We become aware that We have collected Personal Data
+              from anyone under the age of 16 without verification of parental
+              consent, We take steps to remove that information from Our servers.
+            </p>
+            <p>
+              If We need to rely on consent as a legal basis for processing Your
+              information and Your country requires consent from a parent, We may
+              require Your parent&apos;s consent before We collect and use that
+              information.
             </p>
           </Section>
 
-          <Section title="Changes to This Policy">
+          <Section title="Links to Other Websites">
             <p>
-              We may update this privacy policy from time to time. When we do,
-              we will notify you through the app or via email. Continued use of
-              Dreamality after changes constitutes acceptance of the updated
-              policy.
+              Our Service may contain links to other websites that are not
+              operated by Us. If You click on a third party link, You will be
+              directed to that third party&apos;s site. We strongly advise You to
+              review the Privacy Policy of every site You visit.
+            </p>
+            <p>
+              We have no control over and assume no responsibility for the
+              content, privacy policies or practices of any third party sites or
+              services.
             </p>
           </Section>
 
-          <Section title="Contact">
+          <Section title="Changes to this Privacy Policy">
             <p>
-              If you have any questions about this privacy policy or your data,
-              please reach out to us at{" "}
+              We may update Our Privacy Policy from time to time. We will notify
+              You of any changes by posting the new Privacy Policy on this page.
+            </p>
+            <p>
+              We will let You know via email and/or a prominent notice on Our
+              Service, prior to the change becoming effective and update the
+              &quot;Last updated&quot; date at the top of this Privacy Policy.
+            </p>
+            <p>
+              You are advised to review this Privacy Policy periodically for any
+              changes. Changes to this Privacy Policy are effective when they are
+              posted on this page.
+            </p>
+          </Section>
+
+          <Section title="Contact Us">
+            <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+            <p>
+              By email:{" "}
               <a
                 href="mailto:jaypeng.design@gmail.com"
                 className="text-gold hover:text-gold-light transition-colors duration-300 underline underline-offset-4 decoration-gold/30"
               >
                 jaypeng.design@gmail.com
               </a>
-              .
             </p>
           </Section>
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-white/[0.06] px-6 py-8">
         <div className="max-w-3xl mx-auto flex items-center justify-between">
           <p className="text-xs text-muted">
@@ -160,9 +652,40 @@ function Section({
       <h2 className="font-heading text-xl md:text-2xl font-light text-cream tracking-tight mb-4">
         {title}
       </h2>
-      <div className="text-sm text-silver leading-relaxed font-light space-y-3">
+      <div className="text-sm text-silver leading-relaxed font-light space-y-4">
         {children}
       </div>
     </section>
+  );
+}
+
+function Subsection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="space-y-3 mt-6 first:mt-0">
+      <h3 className="font-heading text-lg text-cream font-normal tracking-tight">
+        {title}
+      </h3>
+      <div className="space-y-3">{children}</div>
+    </div>
+  );
+}
+
+function Definition({
+  term,
+  children,
+}: {
+  term: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <p>
+      <strong className="text-cream font-medium">{term}</strong> {children}
+    </p>
   );
 }
