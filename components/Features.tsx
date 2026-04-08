@@ -2,7 +2,6 @@
 
 import { useLanguage } from "./LanguageProvider";
 import { motion } from "framer-motion";
-import { Mic, Sparkles, MessageCircle, CalendarDays, Palette } from "lucide-react";
 import Image from "next/image";
 
 export default function Features() {
@@ -13,7 +12,6 @@ export default function Features() {
       id: "record",
       titleKey: "feature.record.title",
       descKey: "feature.record.desc",
-      icon: <Mic className="w-6 h-6" />,
       align: "left",
       color: "from-blue-500/20 to-cyan-400/20",
       image: "/screenshots/feature-1.png",
@@ -24,7 +22,6 @@ export default function Features() {
       id: "card",
       titleKey: "feature.card.title",
       descKey: "feature.card.desc",
-      icon: <Palette className="w-6 h-6" />,
       align: "right",
       color: "from-purple-500/20 to-pink-400/20",
       image: "/screenshots/feature-2.png",
@@ -35,7 +32,6 @@ export default function Features() {
       id: "ai",
       titleKey: "feature.ai.title",
       descKey: "feature.ai.desc",
-      icon: <Sparkles className="w-6 h-6" />,
       align: "left",
       color: "from-indigo-500/20 to-violet-400/20",
       image: "/screenshots/feature-3.png",
@@ -46,7 +42,6 @@ export default function Features() {
       id: "guide",
       titleKey: "feature.guide.title",
       descKey: "feature.guide.desc",
-      icon: <MessageCircle className="w-6 h-6" />,
       align: "right",
       color: "from-emerald-500/20 to-teal-400/20",
       image: "/screenshots/feature-4.png",
@@ -57,7 +52,6 @@ export default function Features() {
       id: "archive",
       titleKey: "feature.archive.title",
       descKey: "feature.archive.desc",
-      icon: <CalendarDays className="w-6 h-6" />,
       align: "left",
       color: "from-amber-500/20 to-orange-400/20",
       image: "/screenshots/feature-5.png",
@@ -84,13 +78,10 @@ export default function Features() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex-1 space-y-6"
             >
-              <h3 className="text-3xl md:text-4xl font-medium tracking-tight text-white leading-tight flex items-center gap-4">
-                <div className={`shrink-0 w-12 h-12 rounded-full glass-panel flex items-center justify-center text-white/90 border ${feature.borderColor} ${feature.shadowColor} shadow-[0_0_20px_var(--tw-shadow-color)]`}>
-                  {feature.icon}
-                </div>
-                <span>{t(feature.titleKey)}</span>
+              <h3 className="text-3xl md:text-4xl font-medium tracking-tight text-white leading-tight">
+                {t(feature.titleKey)}
               </h3>
-              <p className="text-lg text-white/50 leading-relaxed font-light max-w-lg pl-16">
+              <p className="text-lg text-white/50 leading-relaxed font-light max-w-lg">
                 {t(feature.descKey)}
               </p>
             </motion.div>

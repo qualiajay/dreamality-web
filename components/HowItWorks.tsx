@@ -2,6 +2,36 @@
 
 import { useLanguage } from "./LanguageProvider";
 import { motion } from "framer-motion";
+import { Mic, Sparkles, MessageCircle, CalendarDays, Palette } from "lucide-react";
+
+/** Icons match the five feature blocks in Features.tsx order: record → card → ai → guide → archive */
+const stepIcons = [
+  {
+    icon: <Palette className="w-6 h-6" />,
+    borderColor: "border-blue-500/10",
+    shadowColor: "shadow-blue-500/10",
+  },
+  {
+    icon: <Mic className="w-6 h-6" />,
+    borderColor: "border-purple-500/10",
+    shadowColor: "shadow-purple-500/10",
+  },
+  {
+    icon: <Sparkles className="w-6 h-6" />,
+    borderColor: "border-indigo-500/10",
+    shadowColor: "shadow-indigo-500/10",
+  },
+  {
+    icon: <MessageCircle className="w-6 h-6" />,
+    borderColor: "border-emerald-500/10",
+    shadowColor: "shadow-emerald-500/10",
+  },
+  {
+    icon: <CalendarDays className="w-6 h-6" />,
+    borderColor: "border-amber-500/10",
+    shadowColor: "shadow-amber-500/10",
+  },
+] as const;
 
 export default function HowItWorks() {
   const { t } = useLanguage();
@@ -41,8 +71,10 @@ export default function HowItWorks() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="flex flex-col items-center text-center max-w-[160px] mx-auto group"
               >
-                <div className="w-12 h-12 rounded-full glass-panel border border-white/20 flex items-center justify-center text-white/90 font-medium mb-6 shadow-xl shadow-indigo-500/10 group-hover:scale-110 transition-transform bg-[#0f0f1a]">
-                  {step.num}
+                <div
+                  className={`w-12 h-12 rounded-full glass-panel flex items-center justify-center text-white/90 border ${stepIcons[i].borderColor} ${stepIcons[i].shadowColor} shadow-[0_0_20px_var(--tw-shadow-color)] mb-6 group-hover:scale-110 transition-transform bg-[#0f0f1a]`}
+                >
+                  {stepIcons[i].icon}
                 </div>
                 <h4 className="text-white/90 font-medium text-lg mb-2">
                   {t(step.title)}
