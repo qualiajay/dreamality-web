@@ -1,80 +1,47 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
-import FadeIn from "./FadeIn";
+import { useLanguage } from "./LanguageProvider";
+import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
 
 export default function CTA() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setSubmitted(true);
-    }
-  };
+  const { t } = useLanguage();
 
   return (
-    <section
-      id="waitlist"
-      className="relative px-6 py-28 md:py-36 overflow-hidden"
-    >
-      {/* Background glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        aria-hidden="true"
-      >
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-gold/[0.04] blur-[100px]" />
-      </div>
+    <section id="download" className="w-full py-32 px-6 lg:px-12 relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-indigo-500/20 to-purple-600/20 rounded-full blur-[150px] pointer-events-none" />
+      
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10 glass-panel rounded-3xl p-12 md:p-24 border border-white/10 shadow-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col items-center"
+        >
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-white/10 to-white/5 border border-white/10 mb-8 flex items-center justify-center backdrop-blur-md shadow-lg">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-400 to-purple-400 opacity-80 blur-[2px]" />
+          </div>
 
-      <div className="relative z-10 max-w-xl mx-auto text-center">
-        <FadeIn>
-          <h2 className="font-heading text-3xl md:text-5xl font-light text-cream tracking-tight leading-tight mb-6">
-            Begin understanding
-            <br />
-            your dreams.
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
+            {t("cta.title")}
           </h2>
-        </FadeIn>
-
-        <FadeIn delay={100}>
-          <p className="text-base text-silver leading-relaxed font-light mb-10">
-            Join the waitlist and be among the first to experience Dreamality
-            when it launches on iPhone.
+          
+          <p className="text-lg md:text-xl text-white/50 font-light leading-relaxed max-w-2xl mb-10">
+            {t("cta.subtitle")}
           </p>
-        </FadeIn>
 
-        <FadeIn delay={200}>
-          {submitted ? (
-            <div className="py-4">
-              <p className="text-gold font-medium mb-2">
-                You&apos;re on the list.
-              </p>
-              <p className="text-sm text-silver font-light">
-                We&apos;ll be in touch when Dreamality is ready.
-              </p>
-            </div>
-          ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-            >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email"
-                className="flex-1 px-5 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-full text-sm text-cream placeholder:text-muted focus:outline-none focus:border-gold/30 transition-colors duration-300"
-              />
-              <button
-                type="submit"
-                className="px-8 py-3.5 bg-gold text-midnight font-medium text-sm rounded-full hover:bg-gold-light transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 cursor-pointer"
-              >
-                Join Waitlist
-              </button>
-            </form>
-          )}
-        </FadeIn>
+          <a
+            href="#download"
+            className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 rounded-full transition-all overflow-hidden shadow-[0_0_40px_rgba(99,102,241,0.2)] hover:shadow-[0_0_60px_rgba(99,102,241,0.3)]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <span className="relative flex items-center gap-2">
+              {t("cta.button")}
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

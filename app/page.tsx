@@ -1,24 +1,19 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
-import Experience from "@/components/Experience";
-import Emotional from "@/components/Emotional";
-import Showcase from "@/components/Showcase";
-import FAQ from "@/components/FAQ";
+import HowItWorks from "@/components/HowItWorks";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
+      <div className="bg-deep-space" />
       <Header />
-      <main>
+      <main className="relative z-10 flex flex-col items-center w-full">
         <Hero />
         <Features />
-        <Experience />
-        <Emotional />
-        <Showcase />
-        <FAQ />
+        <HowItWorks />
         <CTA />
       </main>
       <Footer />

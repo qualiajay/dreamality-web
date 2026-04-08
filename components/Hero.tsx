@@ -1,74 +1,65 @@
-import DeviceMockup from "./DeviceMockup";
+"use client";
+
+import { useLanguage } from "./LanguageProvider";
+import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 overflow-hidden">
-      {/* Atmospheric glow orbs */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute top-[-15%] left-[25%] w-[500px] h-[500px] rounded-full bg-[#2a2060]/20 blur-[120px] animate-glow-pulse" />
-        <div
-          className="absolute bottom-[5%] right-[15%] w-[350px] h-[350px] rounded-full bg-gold/[0.06] blur-[100px] animate-glow-pulse"
-          style={{ animationDelay: "4s" }}
-        />
-      </div>
+    <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden">
+      {/* Background ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <p
-          className="text-xs font-medium uppercase tracking-[0.25em] text-gold mb-8 animate-fade-up"
-          style={{ animationDelay: "0.1s" }}
+      <div className="max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel mb-8"
         >
-          AI-Powered Dream Journal for iPhone
-        </p>
+          <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+          <span className="text-xs font-medium text-white/80 uppercase tracking-wider">iOS App Now Available</span>
+        </motion.div>
 
-        <h1
-          className="font-heading text-5xl md:text-7xl lg:text-[5.5rem] font-light text-cream tracking-tight leading-[1.08] mb-8 animate-fade-up"
-          style={{ animationDelay: "0.25s" }}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-white mb-6 leading-[1.1]"
         >
-          Your dreams,
-          <br />
-          understood.
-        </h1>
+          {t("hero.title")}
+        </motion.h1>
 
-        <p
-          className="text-base md:text-lg font-light text-silver leading-relaxed max-w-lg mx-auto mb-12 animate-fade-up"
-          style={{ animationDelay: "0.45s" }}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-lg md:text-xl text-white/60 max-w-2xl mb-10 font-light leading-relaxed"
         >
-          Capture dreams by voice, receive AI-powered interpretations, and
-          discover the patterns hidden in your inner world.
-        </p>
+          {t("hero.subtitle")}
+        </motion.p>
 
-        <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
-          style={{ animationDelay: "0.65s" }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col sm:flex-row items-center gap-4"
         >
           <a
-            href="#waitlist"
-            className="px-8 py-3.5 bg-gold text-midnight font-medium text-sm rounded-full hover:bg-gold-light transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+            href="#download"
+            className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 rounded-full transition-all overflow-hidden"
           >
-            Join the Waitlist
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <span className="relative flex items-center gap-2">
+              {t("hero.cta")}
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
           </a>
-          <a
-            href="#features"
-            className="px-8 py-3.5 border border-white/10 text-cream font-medium text-sm rounded-full hover:border-white/20 hover:bg-white/[0.03] transition-all duration-300"
-          >
-            See How It Works
-          </a>
-        </div>
+        </motion.div>
       </div>
-
-      {/* Hero device mockup */}
-      <div
-        className="relative z-10 mt-16 md:mt-20 animate-fade-up"
-        style={{ animationDelay: "0.85s" }}
-      >
-        <DeviceMockup screen="capture" />
-      </div>
-
-      {/* Bottom gradient fade */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-midnight to-transparent pointer-events-none"
-        aria-hidden="true"
-      />
     </section>
   );
 }

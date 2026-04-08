@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/components/LanguageProvider";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-});
-
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -20,6 +13,10 @@ export const metadata: Metadata = {
   title: "Dreamality — Your dreams, understood.",
   description:
     "An AI-powered dream journal for iPhone. Capture dreams by voice, receive intelligent interpretations, and discover what your inner world is telling you.",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: "/icon.png",
+  },
   openGraph: {
     title: "Dreamality — Your dreams, understood.",
     description:
@@ -34,8 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${sora.variable}`}>
-      <body className="min-h-screen antialiased font-sans">{children}</body>
+    <html lang="en" className={`${inter.variable}`}>
+      <body className="min-h-screen antialiased font-sans text-white selection:bg-indigo-500/30">
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }
