@@ -14,8 +14,11 @@ export const metadata: Metadata = {
   description:
     "An AI-powered dream journal for iPhone. Capture dreams by voice, receive intelligent interpretations, and discover what your inner world is telling you.",
   icons: {
-    icon: [{ url: "/icon.png", type: "image/png" }],
-    apple: "/icon.png",
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/icon.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     title: "Dreamality — Your dreams, understood.",
