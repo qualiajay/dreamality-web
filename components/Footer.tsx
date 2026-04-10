@@ -20,7 +20,12 @@ export default function Footer() {
           <a href="/privacy" className="text-sm text-white/50 hover:text-white transition-colors">
             Privacy Policy
           </a>
-          <a href="/terms" className="text-sm text-white/50 hover:text-white transition-colors">
+          <a
+            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white/50 hover:text-white transition-colors"
+          >
             Terms of Service
           </a>
           <a href="/support" className="text-sm text-white/50 hover:text-white transition-colors">
