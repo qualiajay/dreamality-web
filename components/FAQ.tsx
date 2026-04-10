@@ -26,7 +26,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative px-6 py-24 md:py-32">
+    <section id="faq" className="relative px-6 py-24 md:py-32">
       <div className="max-w-2xl mx-auto">
         <FadeIn>
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold mb-4">

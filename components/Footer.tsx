@@ -23,8 +23,8 @@ export default function Footer() {
           <a href="/terms" className="text-sm text-white/50 hover:text-white transition-colors">
             Terms of Service
           </a>
-          <a href="mailto:hello@dreamality.app" className="text-sm text-white/50 hover:text-white transition-colors">
-            Contact
+          <a href="/support" className="text-sm text-white/50 hover:text-white transition-colors">
+            Support
           </a>
         </div>
         
