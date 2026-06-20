@@ -7,6 +7,8 @@ export const metadata: Metadata = {
 };
 
 const APPLE_PRIVACY = "https://www.apple.com/legal/privacy/";
+const OPENAI_PRIVACY = "https://openai.com/policies/privacy-policy";
+const OPENAI_POLICIES = "https://openai.com/policies";
 
 export default function PrivacyPolicy() {
   return (
@@ -29,7 +31,7 @@ export default function PrivacyPolicy() {
         <h1 className="font-heading text-3xl md:text-5xl font-light text-cream tracking-tight leading-tight mb-4">
           Privacy Policy
         </h1>
-        <p className="text-sm text-muted mb-16">Last updated: April 05, 2026</p>
+        <p className="text-sm text-muted mb-16">Last updated: June 20, 2026</p>
 
         <div className="space-y-12">
           <section className="text-sm text-silver leading-relaxed font-light space-y-4">
@@ -69,6 +71,12 @@ export default function PrivacyPolicy() {
                 ownership of 50% or more of the shares, equity interest or other
                 securities entitled to vote for election of directors or other
                 managing authority.
+              </Definition>
+              <Definition term="AI Service Provider">
+                means a third-party provider of artificial intelligence or
+                machine learning services (such as OpenAI) that processes
+                personal data on Our behalf to deliver AI-powered features
+                within the Application.
               </Definition>
               <Definition term="Application">
                 refers to Dreamality, the software program provided by the
@@ -181,6 +189,305 @@ export default function PrivacyPolicy() {
               </Subsection>
             </Subsection>
 
+            <Subsection title="Third-Party Artificial Intelligence (AI) Services">
+              <p>
+                Dreamality uses third-party artificial intelligence services to
+                power certain optional features of the Application. We do not
+                send your personal data to any third-party AI service unless you
+                have given your explicit consent in the Application.
+              </p>
+              <Subsection title="What AI Features Use Third-Party Services">
+                <p>
+                  If you consent, the Application may use third-party AI
+                  services to:
+                </p>
+                <ul className="list-disc list-inside space-y-2 mt-3">
+                  <li>
+                    Transcribe voice recordings into text (speech-to-text)
+                  </li>
+                  <li>
+                    Generate dream interpretations and related analysis
+                  </li>
+                  <li>Generate AI titles for dream entries</li>
+                  <li>Generate cover images based on dream content</li>
+                  <li>
+                    Provide multi-turn conversational guidance through the AI
+                    dream guide (chat)
+                  </li>
+                </ul>
+                <p>
+                  You can use the Application to record and store dreams locally
+                  without enabling these AI features. If you decline or revoke
+                  consent, AI-powered features will not be available, but core
+                  dream journaling functionality that does not require sending
+                  data to third-party AI services may still be used.
+                </p>
+              </Subsection>
+              <Subsection title="Categories of Data That May Be Shared">
+                <p>
+                  Only after you provide consent, we may send the following
+                  categories of data to third-party AI service providers for
+                  the purposes described above:
+                </p>
+                <div className="overflow-x-auto mt-3">
+                  <table className="w-full text-left border-collapse text-sm">
+                    <thead>
+                      <tr className="border-b border-white/[0.06]">
+                        <th className="py-2 pr-4 font-medium text-cream">
+                          Category
+                        </th>
+                        <th className="py-2 pr-4 font-medium text-cream">
+                          Examples
+                        </th>
+                        <th className="py-2 font-medium text-cream">
+                          When it is sent
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-white/[0.06] align-top">
+                        <td className="py-3 pr-4 font-medium text-cream">
+                          Dream content
+                        </td>
+                        <td className="py-3 pr-4">
+                          Text you type, transcribed speech, and related dream
+                          descriptions
+                        </td>
+                        <td className="py-3">
+                          When you use AI interpretation, title generation,
+                          cover generation, or chat features
+                        </td>
+                      </tr>
+                      <tr className="border-b border-white/[0.06] align-top">
+                        <td className="py-3 pr-4 font-medium text-cream">
+                          Voice recordings
+                        </td>
+                        <td className="py-3 pr-4">
+                          Audio you record for dream capture
+                        </td>
+                        <td className="py-3">
+                          Only when you use voice input and transcription is
+                          requested
+                        </td>
+                      </tr>
+                      <tr className="border-b border-white/[0.06] align-top">
+                        <td className="py-3 pr-4 font-medium text-cream">
+                          Chat content
+                        </td>
+                        <td className="py-3 pr-4">
+                          Messages you send to the AI dream guide and related
+                          conversation context
+                        </td>
+                        <td className="py-3">
+                          When you use the AI chat feature
+                        </td>
+                      </tr>
+                      <tr className="align-top">
+                        <td className="py-3 pr-4 font-medium text-cream">
+                          Dream metadata (optional)
+                        </td>
+                        <td className="py-3 pr-4">
+                          Mood, clarity, sleep quality, notes, and similar
+                          fields you choose to provide
+                        </td>
+                        <td className="py-3">
+                          When included with a dream entry processed by AI
+                          features
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  We do not intentionally send payment information, Apple
+                  account identifiers, or device advertising identifiers to
+                  third-party AI service providers for these features.
+                </p>
+              </Subsection>
+              <Subsection title="Third-Party Recipients">
+                <p>
+                  We use OpenAI, L.L.C. (United States) as our third-party AI
+                  service provider for the features listed above.
+                </p>
+                <p>
+                  Data is transmitted from the Application to our secure backend
+                  infrastructure (hosted via Supabase), and relevant content is
+                  then sent to OpenAI&apos;s APIs solely to perform the requested
+                  AI feature. OpenAI processes this data as a service provider on
+                  our behalf to deliver the AI output you request.
+                </p>
+                <p>
+                  For more information about how OpenAI handles data, please
+                  review OpenAI&apos;s policies, including:
+                </p>
+                <ul className="list-disc list-inside space-y-2 mt-3">
+                  <li>
+                    OpenAI Privacy Policy:{" "}
+                    <a
+                      href={OPENAI_PRIVACY}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gold hover:text-gold-light transition-colors duration-300 underline underline-offset-4 decoration-gold/30"
+                    >
+                      {OPENAI_PRIVACY}
+                    </a>
+                  </li>
+                  <li>
+                    OpenAI API / business data usage terms (as applicable to
+                    API customers):{" "}
+                    <a
+                      href={OPENAI_POLICIES}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gold hover:text-gold-light transition-colors duration-300 underline underline-offset-4 decoration-gold/30"
+                    >
+                      {OPENAI_POLICIES}
+                    </a>
+                  </li>
+                </ul>
+                <p>
+                  We configure our use of OpenAI&apos;s services so that your
+                  content is processed only to provide the requested feature and
+                  is not used by us for unrelated purposes.
+                </p>
+              </Subsection>
+              <Subsection title="Legal Basis and Your Consent">
+                <p>
+                  Your explicit consent is required before we share personal
+                  data with third-party AI services. When you first attempt to
+                  use an AI-powered feature, the Application displays a clear
+                  in-app notice that explains:
+                </p>
+                <ul className="list-disc list-inside space-y-2 mt-3">
+                  <li>What categories of data will be sent</li>
+                  <li>
+                    That data will be shared with OpenAI (via our secure
+                    servers)
+                  </li>
+                  <li>How the data will be used</li>
+                  <li>A link to this Privacy Policy</li>
+                </ul>
+                <p>
+                  You may choose &quot;Agree &amp; Continue&quot; to grant
+                  consent or &quot;Not Now&quot; to decline. If you decline, no
+                  personal data will be sent to third-party AI services for that
+                  action.
+                </p>
+                <p>
+                  You may withdraw your consent at any time by going to Settings
+                  → AI Data Sharing in the Application and revoking consent.
+                  After revocation, we will not send new personal data to
+                  third-party AI services. Previously generated AI content may
+                  remain stored locally on your device until you delete it.
+                </p>
+                <p>
+                  Where applicable law requires a legal basis for processing
+                  (such as under the GDPR), we rely on your consent for sharing
+                  personal data with third-party AI service providers for the
+                  purposes described in this section.
+                </p>
+              </Subsection>
+              <Subsection title="Data Protection and International Transfers">
+                <p>
+                  Because OpenAI is located in the United States, your data may
+                  be transferred to and processed in a country that may have
+                  different data protection laws than your country of residence.
+                  Where required by applicable law, we implement appropriate
+                  safeguards for such transfers.
+                </p>
+                <p>
+                  We take commercially reasonable steps to protect personal data
+                  in transit and at rest, including use of encrypted
+                  connections (such as HTTPS/TLS) between the Application and
+                  our servers. However, no method of transmission or storage is
+                  completely secure.
+                </p>
+                <p>
+                  We require our service providers, including AI service
+                  providers, to handle personal data in accordance with
+                  applicable privacy laws and our instructions, and only for
+                  the purposes described in this Privacy Policy.
+                </p>
+              </Subsection>
+              <Subsection title="Retention of AI-Related Data">
+                <ul className="list-disc list-inside space-y-2 mt-3">
+                  <li>
+                    <strong className="text-cream font-medium">
+                      On your device:
+                    </strong>{" "}
+                    Dream entries and AI-generated content (interpretations,
+                    images, chat history) are stored locally on your device
+                    subject to your control and deletion.
+                  </li>
+                  <li>
+                    <strong className="text-cream font-medium">
+                      On our servers:
+                    </strong>{" "}
+                    Content sent for AI processing is handled transiently
+                    through our backend to fulfill your request. We do not use
+                    third-party AI services to build advertising profiles about
+                    you.
+                  </li>
+                  <li>
+                    <strong className="text-cream font-medium">
+                      By OpenAI:
+                    </strong>{" "}
+                    Retention and handling by OpenAI are governed by
+                    OpenAI&apos;s policies and our configuration of their
+                    services. We do not retain your dream content on our servers
+                    longer than necessary to provide the Service.
+                  </li>
+                </ul>
+              </Subsection>
+              <Subsection title="Your Choices and Rights">
+                <p>
+                  In addition to granting or withdrawing consent in the
+                  Application, you may:
+                </p>
+                <ul className="list-disc list-inside space-y-2 mt-3">
+                  <li>
+                    Delete individual dream entries (and associated AI-generated
+                    content) from within the Application
+                  </li>
+                  <li>
+                    Contact us to request access to, correction of, or deletion
+                    of personal data we hold about you, subject to applicable
+                    law
+                  </li>
+                </ul>
+                <p>
+                  If you are located in the EEA, UK, or other jurisdictions with
+                  data protection laws, you may have additional rights as
+                  described in the GDPR Privacy section of this Privacy Policy,
+                  including the right to withdraw consent at any time without
+                  affecting the lawfulness of processing based on consent
+                  before its withdrawal.
+                </p>
+              </Subsection>
+              <Subsection title="Changes to AI Service Providers">
+                <p>
+                  We may update the third-party AI service providers we use. If
+                  we add a new AI provider that processes your personal data in
+                  a materially different way, we will update this Privacy Policy
+                  and, where required, obtain your consent again before sharing
+                  your data with that provider.
+                </p>
+              </Subsection>
+              <Subsection title="Contact Us About AI Data Sharing">
+                <p>
+                  If you have questions about how we share data with third-party
+                  AI services, contact us at{" "}
+                  <a
+                    href="mailto:jaypeng.design@gmail.com"
+                    className="text-gold hover:text-gold-light transition-colors duration-300 underline underline-offset-4 decoration-gold/30"
+                  >
+                    jaypeng.design@gmail.com
+                  </a>
+                  .
+                </p>
+              </Subsection>
+            </Subsection>
+
             <Subsection title="Use of Your Personal Data">
               <p>The Company may use Personal Data for the following purposes:</p>
               <ul className="list-disc list-inside space-y-2 mt-3">
@@ -247,6 +554,16 @@ export default function PrivacyPolicy() {
                   </strong>{" "}
                   We may share Your Personal Data with Service Providers to
                   monitor and analyze the use of our Service, to contact You.
+                </li>
+                <li>
+                  <strong className="text-cream font-medium">
+                    With AI Service Providers (with Your consent):
+                  </strong>{" "}
+                  We may share dream content, voice recordings, chat messages,
+                  and related metadata with AI Service Providers such as OpenAI
+                  to provide AI-powered features, but only after You have given
+                  explicit in-app consent. You may withdraw this consent at any
+                  time in the Application settings.
                 </li>
                 <li>
                   <strong className="text-cream font-medium">
